@@ -86,6 +86,17 @@
     <module>spring</module>
   </modules>
 
+    <distributionManagement>
+        <repository>
+            <id>shared-nexus</id>
+            <url>https://144.76.139.130:8095/nexus/content/repositories/shared-builds</url>
+        </repository>
+        <snapshotRepository>
+            <id>shared-nexus</id>
+            <url>https://144.76.139.130:8095/nexus/content/repositories/shared-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -93,7 +104,7 @@
 
     <!-- JDK properties that can be overridden from the command line
          to build under a different JDKs (continuous integration) -->
-    <jdk.version>1.7</jdk.version>
+    <jdk.version>1.6</jdk.version>
     <maven.compiler.source>${jdk.version}</maven.compiler.source>
     <maven.compiler.target>${jdk.version}</maven.compiler.target>
 
